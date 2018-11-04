@@ -68,12 +68,17 @@ feature -- Basic operations
 			do
 			end
 
-	topsort: LIST[G]
+	topsort(visualize: BOOLEAN, showcycle: BOOLEAN) : LIST[G]
 			-- returns a topologically sorted LIST of all given elements and constraints
+			--
+			-- `visualize': if set to TRUE, the result will be visualized
+			-- `showcycle': is set to TRUE, any cycle will be visualized
 			do
 			end
 
 	help
 			-- prints out a list of possible operations
-	
+			do
+			end
+
 end
