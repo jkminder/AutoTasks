@@ -9,5 +9,7 @@ class
 
 inherit
 	AUTOTASKS [STRING]
+create
+	make_con, make_el_con
 
 end
