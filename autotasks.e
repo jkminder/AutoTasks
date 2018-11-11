@@ -8,9 +8,13 @@ class
 	AUTOTASKS[G]
 
 create
-	make_el_con, make_con
+	make_el_con, make_con, make
 
 feature {NONE} -- Initialization
+	make
+			-- Initialization with no data input
+			do
+			end
 
 	make_con(constraints: LIST[TUPLE[G, G]])
 			-- Initialization with only a LIST of constraint TUPLES
@@ -33,7 +37,7 @@ feature {NONE} -- Initialization
 			end
 
 feature -- Element change
-	addelement(element: G)
+	add_element(element: G)
 			-- Add a element to the sort algorithm
 			--
 			-- `elements': LIST of elements, that have to be included in TopSort
@@ -42,7 +46,7 @@ feature -- Element change
 			do
 			end
 
-	addconstraint(constraint: TUPLE[G, G])
+	add_constraint(constraint: TUPLE[G, G])
 			-- Add a constraint TUPLE to the sort algorithm
 			--
 			-- `constraints': TUPLE with two objects G, such that the first has to come before the second
@@ -51,7 +55,7 @@ feature -- Element change
 			do
 			end
 
-	removeelement(element: G)
+	remove_element(element: G)
 			-- Removes the elements that are equal to the input element
 			--
 			-- `elements': LIST of elements, that have to be included in TopSort
@@ -60,7 +64,7 @@ feature -- Element change
 			do
 			end
 
-	removeconstraint(constraint: TUPLE[G ,G])
+	remove_constraint(constraint: TUPLE[G ,G])
 			-- Removes the constraint TUPLEs that are equal to the input constraint TUPLE
 			--
 			-- `constraints': TUPLE with two objects G, such that the first has to come before the second
@@ -71,12 +75,12 @@ feature -- Element change
 
 feature -- Basic operations
 
-	printelements
+	print_elements
 			-- prints all existing Elements
 			do
 			end
 
-	printconstraints
+	print_constraints
 			-- prints all existing Constraints
 			do
 			end
@@ -87,7 +91,6 @@ feature -- Basic operations
 			-- `visualize': if set to TRUE, the result will be visualized
 			-- `showcycle': is set to TRUE, any cycle will be visualized
 			do
-				Result := void
 			end
 
 	help

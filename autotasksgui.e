@@ -10,6 +10,12 @@ class
 inherit
 	AUTOTASKS [STRING]
 create
-	make_con, make_el_con
+	make, make_con, make_el_con
+
+feature --change
+	close
+			-- 	closes the GUI
+			do
+			end
 
 end
